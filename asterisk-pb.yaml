@@ -123,6 +123,10 @@
       copy:
         src: /tmp/asterisk_httpd_postfix/conf/asterisk/voicemail.conf
         dest: /etc/asterisk/
+    - name: Copiar configuracion modules.conf
+      copy:
+        src: /tmp/asterisk_httpd_postfix/conf/asterisk/modules.conf
+        dest: /etc/asterisk/
     - name: copiar sounds en remoto
       copy:
         src: /tmp/asterisk_httpd_postfix/conf/asterisk/sounds/*
