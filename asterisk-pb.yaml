@@ -1,5 +1,5 @@
 ---
-- hosts: asterisk
+- hosts: servidores
   become: yes
   tasks:
     - name: Instalar net-tools
@@ -124,7 +124,7 @@
         src: /tmp/asterisk_httpd_postfix/conf/asterisk/voicemail.conf
         dest: /etc/asterisk/
     - name: copiar sounds en remoto
-        copy:
+      copy:
         src: /tmp/asterisk_httpd_postfix/conf/asterisk/sounds/*
         dest: /var/lib/asterisk/sounds/en/
     - name: asterisk 
