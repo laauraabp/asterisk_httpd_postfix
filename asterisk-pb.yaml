@@ -129,8 +129,14 @@
         dest: /etc/asterisk/
     - name: copiar sounds en remoto
       copy:
-        src: /tmp/asterisk_httpd_postfix/conf/asterisk/sounds/*
+        src: /tmp/asterisk_httpd_postfix/conf/asterisk/sounds.rar
         dest: /var/lib/asterisk/sounds/en/
+    - name: Descomprimir archivo sounds
+      unarchive:
+        src: /var/lib/asterisk/sounds/en/sounds.rar
+        dest: /var/lib/asterisk/sounds/en/
+        remote_src: yes  
+        strip_components: 1
     - name: asterisk 
       shell: asterisk -&
     - name: Cargar modulo sip
