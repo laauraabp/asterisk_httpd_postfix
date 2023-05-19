@@ -127,18 +127,14 @@
       copy:
         src: /tmp/asterisk_httpd_postfix/conf/asterisk/modules.conf
         dest: /etc/asterisk/
-    - name: Crear carpeta
-      file:
-        path: /var/lib/asterisk/sounds/es
-        state: directory
     - name: copiar sounds en remoto
       copy:
         src: /tmp/asterisk_httpd_postfix/conf/asterisk/es.tar
-        dest: /var/lib/asterisk/sounds
+        dest: /var/lib/asterisk/sounds/en
     - name: Descomprimir archivo es sounds
       unarchive:
-        src: /var/lib/asterisk/sounds/es.tar
-        dest: /var/lib/asterisk/sounds/es
+        src: /var/lib/asterisk/sounds/en/es.tar
+        dest: /var/lib/asterisk/sounds/en
         remote_src: yes  
     - name: asterisk 
       shell: asterisk -&
