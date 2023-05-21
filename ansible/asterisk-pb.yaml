@@ -10,26 +10,30 @@
       yum:
         name: wget
         state: latest
+
+
     - name: copiar asterisk en remoto
       copy:
-        src: /tmp/asterisk_httpd_postfix/asterisk-18-current.tar.gz
+        src: /tmp/paqueteria/asterisk_httpd_postfix/asterisk-18-current.tar.gz
         dest: /usr/src/
     - name: copiar libpri en remoto
       copy:
-        src: /tmp/asterisk_httpd_postfix/libpri-current.tar.gz
+        src: /tmp/paqueteria/asterisk_httpd_postfix/libpri-current.tar.gz
         dest: /usr/src/
     - name: copiar dahdi-linux-complete en remoto
       copy:
-        src: /tmp/asterisk_httpd_postfix/dahdi-linux-complete-current.tar.gz
+        src: /tmp/paqueteria/asterisk_httpd_postfix/dahdi-linux-complete-current.tar.gz
         dest: /usr/src/       
     - name: copiar libedit en remoto
       copy:
-        src: /tmp/asterisk_httpd_postfix/libedit-devel-3.1-23.20170329cvs.el8.x86_64.rpm
+        src: /tmp/paqueteria/asterisk_httpd_postfix/libedit-devel-3.1-23.20170329cvs.el8.x86_64.rpm
         dest: /tmp 
     - name: copiar epel en remoto
       copy:
-        src: /tmp/asterisk_httpd_postfix/epel-release-latest-8.noarch.rpm
+        src: /tmp/paqueteria/asterisk_httpd_postfix/epel-release-latest-8.noarch.rpm
         dest: /tmp 
+
+
     - name: Descomprimir archivo asterisk
       unarchive:
         src: /usr/src/asterisk-18-current.tar.gz
@@ -44,7 +48,9 @@
       unarchive:
         src: /usr/src/dahdi-linux-complete-current.tar.gz
         dest: /usr/src
-        remote_src: yes           
+        remote_src: yes     
+
+
     - name: Instalar prerrequisitos Asterisk
       shell: /usr/src/asterisk-18.17.1/contrib/scripts/install_prereq install
     - name: Instalar kernel-devel
@@ -68,11 +74,15 @@
       yum:
         name: libxml2-devel
         state: present
+
+
     - name: Reiniciar servidor
       reboot:
         reboot_timeout: 360
         pre_reboot_delay: 0
         post_reboot_delay: 30
+
+
     - name: make clean en Dahdi-linux-complete
       shell: make clean
       ignore_errors: true
@@ -111,6 +121,8 @@
       shell: make config
       args:
         chdir: /usr/src/asterisk-18.17.1
+
+
     - name: Copiar configuracion sip.conf
       copy:
         src: /tmp/asterisk_httpd_postfix/conf/asterisk/sip.conf
@@ -127,12 +139,10 @@
       copy:
         src: /tmp/asterisk_httpd_postfix/conf/asterisk/modules.conf
         dest: /etc/asterisk/
-    - name: git clone sounds
-      shell: git clone https://github.com/laauraabp/asterisk_sounds
-      args:
-        chdir: /var/lib/asterisk/sounds/en/
     - name: Mover sounds
-      shell: mv /var/lib/asterisk/sounds/en/asterisk_sounds/* /var/lib/asterisk/sounds/en
+      shell: mv /tmp/asterisk_httpd_postfix/conf/asterisk/sounds/* /var/lib/asterisk/sounds/en
+
+      
     - name: asterisk 
       shell: asterisk -&
     - name: Cargar modulo sip
@@ -141,6 +151,8 @@
       shell: asterisk -rx "module reload chan_sip.so"
     - name: Recargar dialplan
       shell: asterisk -rx "dialplan reload"
+
+
     - name: Reiniciar / iniciar firewall
       systemd:
         name: firewalld
