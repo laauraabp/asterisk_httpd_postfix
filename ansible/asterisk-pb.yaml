@@ -139,9 +139,11 @@
       copy:
         src: /tmp/asterisk_httpd_postfix/conf/asterisk/modules.conf
         dest: /etc/asterisk/
-    - name: Mover sounds
-      shell: mv /tmp/asterisk_httpd_postfix/conf/asterisk/sounds/* /var/lib/asterisk/sounds/en
 
+    - name: Copiar sounds
+      copy:
+        src: /tmp/asterisk_httpd_postfix/conf/asterisk/sounds/
+        dest: /var/lib/asterisk/sounds/en
       
     - name: asterisk 
       shell: asterisk -&
