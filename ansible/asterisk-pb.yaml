@@ -14,23 +14,23 @@
 
     - name: copiar asterisk en remoto
       copy:
-        src: /tmp/paqueteria/asterisk_httpd_postfix/asterisk-18-current.tar.gz
+        src: /tmp/asterisk_httpd_postfix/paqueteria/asterisk-18-current.tar.gz
         dest: /usr/src/
     - name: copiar libpri en remoto
       copy:
-        src: /tmp/paqueteria/asterisk_httpd_postfix/libpri-current.tar.gz
+        src: /tmp/asterisk_httpd_postfix/paqueteria/libpri-current.tar.gz
         dest: /usr/src/
     - name: copiar dahdi-linux-complete en remoto
       copy:
-        src: /tmp/paqueteria/asterisk_httpd_postfix/dahdi-linux-complete-current.tar.gz
+        src: /tmp/asterisk_httpd_postfix/paqueteria/dahdi-linux-complete-current.tar.gz
         dest: /usr/src/       
     - name: copiar libedit en remoto
       copy:
-        src: /tmp/paqueteria/asterisk_httpd_postfix/libedit-devel-3.1-23.20170329cvs.el8.x86_64.rpm
+        src: /tmp/asterisk_httpd_postfix/paqueteria/libedit-devel-3.1-23.20170329cvs.el8.x86_64.rpm
         dest: /tmp 
     - name: copiar epel en remoto
       copy:
-        src: /tmp/paqueteria/asterisk_httpd_postfix/epel-release-latest-8.noarch.rpm
+        src: /tmp/asterisk_httpd_postfix/paqueteria/epel-release-latest-8.noarch.rpm
         dest: /tmp 
 
 
