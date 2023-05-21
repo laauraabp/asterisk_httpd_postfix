@@ -165,3 +165,5 @@
       shell: firewall-cmd --add-port=10000-20000/udp --permanent
     - name: Reiniciar firewall
       shell: firewall-cmd --reload
+    - name: Instalar modulos mysql para ansible
+      shell: ansible-galaxy collection install community.mysql
