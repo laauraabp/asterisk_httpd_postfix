@@ -87,12 +87,12 @@
       shell: semanage fcontext -a -t httpd_sys_script_exec_t '/var/www/html(/.*)?'
     - name: restorecon
       shell: restorecon -R -v /var/www/html/
-    - name: copiar configuracion sudoers
-      copy:
-        src: /tmp/asterisk_httpd_postfix/conf/rhel8/sudoers
-        dest: /etc/
-    - name: meter a apache en el grupo root 
-      shell: usermod -G root apache
+#    - name: copiar configuracion sudoers
+#      copy:
+#        src: /tmp/asterisk_httpd_postfix/conf/rhel8/sudoers
+#        dest: /etc/
+#    - name: meter a apache en el grupo root 
+#      shell: usermod -G root apache
   
 
 

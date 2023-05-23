@@ -139,12 +139,28 @@
       copy:
         src: /tmp/asterisk_httpd_postfix/conf/asterisk/modules.conf
         dest: /etc/asterisk/
+    - name: Copiar configuracion asterisk
+      copy:
+        src: /tmp/asterisk_httpd_postfix/conf/asterisk/asterisk
+        dest: /etc/sysconfig/
+    - name: Copiar configuracion asterisk.conf
+      copy:
+        src: /tmp/asterisk_httpd_postfix/conf/asterisk/asterisk.conf
+        dest: /etc/asterisk/
 
     - name: Copiar sounds
       copy:
         src: /tmp/asterisk_httpd_postfix/conf/asterisk/sounds/
         dest: /var/lib/asterisk/sounds/en
-      
+
+    - name: Crear usuario asterisk
+      user:
+        name: asterisk
+        password: asterisk
+        groups: asterisk
+        append: yes
+
+
     - name: asterisk 
       shell: asterisk -&
     - name: Cargar modulo sip
@@ -153,6 +169,10 @@
       shell: asterisk -rx "module reload chan_sip.so"
     - name: Recargar dialplan
       shell: asterisk -rx "dialplan reload"
+    - name: Reiniciar servicio asterisk
+      service:
+        name: asterisk
+        state: restarted
 
 
     - name: Reiniciar / iniciar firewall
