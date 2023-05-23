@@ -153,13 +153,11 @@
         src: /tmp/asterisk_httpd_postfix/conf/asterisk/sounds/
         dest: /var/lib/asterisk/sounds/en
 
-    - name: Crear usuario asterisk
+    - name: Crear usuario
       user:
         name: asterisk
-        password: asterisk
-        groups: asterisk
-        append: yes
-
+        password: "{{ 'password' | password_hash('sha512') }}"
+        shell: /bin/bash
 
     - name: asterisk 
       shell: asterisk -&
@@ -185,5 +183,4 @@
       shell: firewall-cmd --add-port=10000-20000/udp --permanent
     - name: Reiniciar firewall
       shell: firewall-cmd --reload
-    - name: Instalar modulos mysql para ansible
-      shell: ansible-galaxy collection install community.mysql
+
