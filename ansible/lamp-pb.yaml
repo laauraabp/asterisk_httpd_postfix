@@ -69,6 +69,10 @@
         state: present
     - name: install php php-fpm php-mysqlnd php-opcache php-gd php-xml php-mbstring
       shell: dnf install php php-fpm php-mysqlnd php-opcache php-gd php-xml php-mbstring -y
+    - name: copiar php.ini
+      copy:
+        src: /tmp/asterisk_httpd_postfix/conf/mysql/php.ini
+        dest: /etc/
     - name: start php-fpm
       systemd:
         name: php-fpm
