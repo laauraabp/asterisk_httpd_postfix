@@ -5,8 +5,8 @@
 # be sure that Asterisk's environment has permission to write the
 # files required  for  its  operation, including logs, its comm
 # socket, the asterisk database, etc.
-#AST_USER="asterisk"
-#AST_GROUP="asterisk"
+AST_USER="asterisk"
+AST_GROUP="asterisk"
 
 # If you DON'T want Asterisk to start up with terminal colors, comment
 # this out.
@@ -42,6 +42,6 @@ COLOR=yes
 # Start all recordings into a temporary directory, before moving them to
 # their final location.
 #TEMPRECORDINGLOCATION=yes
-AST_USER = asetrisk
-AST_GROUP = asterisk
+#AST_USER = asterisk
+#AST_GROUP = asterisk
 
