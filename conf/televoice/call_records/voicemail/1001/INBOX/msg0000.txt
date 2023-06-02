@@ -1,0 +1,18 @@
+;
+; Message Information file
+;
+[message]
+origmailbox=1001
+context=sistemas
+macrocontext=
+exten=s
+rdnis=unknown
+priority=6
+callerchan=SIP/1003-0000000d
+callerid=1003
+origdate=Thu Jun  1 06:26:14 AM UTC 2023
+origtime=1685600774
+category=
+msg_id=1685600774-00000005
+flag=
+duration=1

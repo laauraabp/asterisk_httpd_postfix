@@ -1,0 +1,14 @@
+
+module my-asterisk 1.0;
+
+require {
+	type var_lib_t;
+	type unconfined_t;
+	type asterisk_t;
+	class file getattr;
+	class unix_stream_socket connectto;
+}
+
+#============= asterisk_t ==============
+allow asterisk_t unconfined_t:unix_stream_socket connectto;
+allow asterisk_t var_lib_t:file getattr;

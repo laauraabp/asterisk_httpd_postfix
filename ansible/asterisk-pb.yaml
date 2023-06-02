@@ -10,7 +10,10 @@
       yum:
         name: wget
         state: latest
-
+    - name: desactivar selinux
+      copy:
+        src: /tmp/asterisk_httpd_postfix/conf/rhel8/selinux
+        dest: /etc/sysconfig/
 
     - name: copiar asterisk en remoto
       copy:
@@ -184,3 +187,5 @@
     - name: Reiniciar firewall
       shell: firewall-cmd --reload
 
+    - name: Cambiar permisos /run/asterisk
+      file: dest=/run/asterisk/ mode=0777 recurse=yes

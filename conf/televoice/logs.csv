@@ -1,0 +1,336 @@
+[May 26 02:31:16],Asterisk,18.17.1 built by root @ localhost.localdomain on a x86_64 running Linux on 2023-05-26 06:23:16 UTC 
+[May 26 02:31:16],NOTICE[50956],loader.c: 343 modules will be loaded. 
+[May 26 02:31:16],NOTICE[50956],res_config_ldap.c: No directory user found, anonymous binding as default. 
+[May 26 02:31:16],ERROR[50956],res_config_ldap.c: No directory URL or host found. 
+[May 26 02:31:16],ERROR[50956],res_config_ldap.c: Cannot load LDAP RealTime driver. 
+[May 26 02:31:16],ERROR[50956],res_config_pgsql.c: PostgreSQL RealTime: Failed to connect database asterisk on 127.0.0.1: 
+[May 26 02:31:16],WARNING[50956],res_config_pgsql.c: PostgreSQL RealTime: Couldn't establish connection. Check debug. 
+[May 26 02:31:16],NOTICE[50956],cdr.c: CDR simple logging enabled. 
+[May 26 02:31:16],WARNING[50956],config.c: parse error: No category context for line 310 of /etc/asterisk/geolocation.conf 
+[May 26 02:31:16],ERROR[50956],res_sorcery_config.c: Contents of config file 'geolocation.conf' are invalid and cannot be parsed 
+[May 26 02:31:16],WARNING[50956],config.c: parse error: No category context for line 310 of /etc/asterisk/geolocation.conf 
+[May 26 02:31:16],ERROR[50956],res_sorcery_config.c: Contents of config file 'geolocation.conf' are invalid and cannot be parsed 
+[May 26 02:31:17],WARNING[50956],res_phoneprov.c: Unable to find a valid server address or name. 
+[May 26 02:31:17],NOTICE[50956],res_smdi.c: No SMDI interfaces are available to listen on, not starting SMDI listener. 
+[May 26 02:31:17],NOTICE[50956],chan_dahdi.c: Ignoring any changes to 'userbase' (on reload) at line 23. 
+[May 26 02:31:17],NOTICE[50956],chan_dahdi.c: Ignoring any changes to 'vmsecret' (on reload) at line 31. 
+[May 26 02:31:17],NOTICE[50956],chan_dahdi.c: Ignoring any changes to 'hassip' (on reload) at line 35. 
+[May 26 02:31:17],NOTICE[50956],chan_dahdi.c: Ignoring any changes to 'hasiax' (on reload) at line 39. 
+[May 26 02:31:17],NOTICE[50956],chan_dahdi.c: Ignoring any changes to 'hasmanager' (on reload) at line 47. 
+[May 26 02:31:17],NOTICE[50956],chan_skinny.c: Configuring skinny from skinny.conf 
+[May 26 02:31:17],ERROR[50956],ari/config.c: No configured users for ARI 
+[May 26 02:31:17],NOTICE[50956],confbridge/conf_config_parser.c: Adding default_menu menu to app_confbridge 
+[May 26 02:31:17],NOTICE[50956],cdr_pgsql.c: cdr_pgsql configuration contains no global section, skipping module load. 
+[May 26 02:31:17],NOTICE[50956],cel_custom.c: No mappings found in cel_custom.conf. Not logging CEL to custom CSVs. 
+[May 26 02:31:17],WARNING[50956],cel_pgsql.c: CEL pgsql config file missing global section. 
+[May 26 02:31:17],WARNING[50956],pbx.c: Unable to register extension 's' priority 1 in 'usuarios', already in use 
+[May 26 02:31:17],WARNING[50956],pbx_config.c: Unable to register extension at line 940 of extensions.conf 
+[May 26 02:31:17],WARNING[50956],pbx.c: Unable to register extension 's' priority 2 in 'usuarios', already in use 
+[May 26 02:31:17],WARNING[50956],pbx_config.c: Unable to register extension at line 942 of extensions.conf 
+[May 26 02:31:17],WARNING[50956],pbx.c: Unable to register extension '2001' priority 1 in 'usuarios', already in use 
+[May 26 02:31:17],WARNING[50956],pbx_config.c: Unable to register extension at line 949 of extensions.conf 
+[May 26 02:31:17],WARNING[50956],pbx.c: Unable to register extension '2001' priority 2 in 'usuarios', already in use 
+[May 26 02:31:17],WARNING[50956],pbx_config.c: Unable to register extension at line 950 of extensions.conf 
+[May 26 02:31:17],WARNING[50956],pbx.c: Unable to register extension '2001' priority 3 in 'usuarios', already in use 
+[May 26 02:31:17],WARNING[50956],pbx_config.c: Unable to register extension at line 951 of extensions.conf 
+[May 26 02:31:17],ERROR[50956],codec_dahdi.c: Failed to open /dev/dahdi/transcode: No such file or directory 
+[May 26 02:31:17],WARNING[50956],loader.c: Some non-required modules failed to load. 
+[May 26 02:31:17],WARNING[50956],loader.c: Module 'res_monitor' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 21. Its replacement is 'app_mixmonitor'. 
+[May 26 02:31:17],WARNING[50956],loader.c: Module 'chan_mgcp' has been loaded but will be deprecated in Asterisk version 19 and will be removed in Asterisk version 21. 
+[May 26 02:31:17],WARNING[50956],loader.c: Module 'chan_skinny' has been loaded but will be deprecated in Asterisk version 19 and will be removed in Asterisk version 21. 
+[May 26 02:31:17],WARNING[50956],loader.c: Module 'chan_sip' has been loaded but was deprecated in Asterisk version 17 and will be removed in Asterisk version 21. 
+[May 26 02:31:17],WARNING[50956],loader.c: Module 'res_adsi' has been loaded but may be removed in a future release. 
+[May 26 02:31:17],WARNING[50956],loader.c: Module 'chan_oss' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 19. 
+[May 26 02:31:17],WARNING[50956],loader.c: Module 'app_nbscat' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 19. 
+[May 26 02:31:17],WARNING[50956],loader.c: Module 'app_dahdiras' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 19. 
+[May 26 02:31:17],WARNING[50956],loader.c: Module 'app_url' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 19. 
+[May 26 02:31:17],WARNING[50956],loader.c: Module 'app_adsiprog' has been loaded but may be removed in a future release. 
+[May 26 02:31:17],WARNING[50956],loader.c: Module 'app_getcpeid' has been loaded but may be removed in a future release. 
+[May 26 02:31:17],WARNING[50956],loader.c: Module 'app_ices' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 19. 
+[May 26 02:31:17],WARNING[50956],loader.c: Module 'app_image' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 19. 
+[May 26 02:31:17],ERROR[50956],loader.c: res_timing_dahdi declined to load. 
+[May 26 02:31:17],ERROR[50956],loader.c: res_pjsip_transport_websocket declined to load. 
+[May 26 02:31:17],ERROR[50956],loader.c: cdr_sqlite3_custom declined to load. 
+[May 26 02:31:17],ERROR[50956],loader.c: cdr_pgsql declined to load. 
+[May 26 02:31:17],ERROR[50956],loader.c: cel_sqlite3_custom declined to load. 
+[May 26 02:31:17],WARNING[51166],loader.c: Module 'chan_sip.so' already loaded and running. 
+[May 26 02:31:17],WARNING[51041],chan_sip.c: chan_sip has no official maintainer and is deprecated. Migration to 
+[May 26 02:31:17],WARNING[51041],chan_sip.c: chan_pjsip is recommended. See guides at the Asterisk Wiki: 
+[May 26 02:31:17],WARNING[51041],chan_sip.c: https://wiki.asterisk.org/wiki/display/AST/Migrating+from+chan_sip+to+res_pjsip 
+[May 26 02:31:17],WARNING[51041],chan_sip.c: https://wiki.asterisk.org/wiki/display/AST/Configuring+res_pjsip 
+[May 26 02:31:18],WARNING[51435],pbx.c: Unable to register extension 's' priority 1 in 'usuarios', already in use 
+[May 26 02:31:18],WARNING[51435],pbx_config.c: Unable to register extension at line 940 of extensions.conf 
+[May 26 02:31:18],WARNING[51435],pbx.c: Unable to register extension 's' priority 2 in 'usuarios', already in use 
+[May 26 02:31:18],WARNING[51435],pbx_config.c: Unable to register extension at line 942 of extensions.conf 
+[May 26 02:31:18],WARNING[51435],pbx.c: Unable to register extension '2001' priority 1 in 'usuarios', already in use 
+[May 26 02:31:18],WARNING[51435],pbx_config.c: Unable to register extension at line 949 of extensions.conf 
+[May 26 02:31:18],WARNING[51435],pbx.c: Unable to register extension '2001' priority 2 in 'usuarios', already in use 
+[May 26 02:31:18],WARNING[51435],pbx_config.c: Unable to register extension at line 950 of extensions.conf 
+[May 26 02:31:18],WARNING[51435],pbx.c: Unable to register extension '2001' priority 3 in 'usuarios', already in use 
+[May 26 02:31:18],WARNING[51435],pbx_config.c: Unable to register extension at line 951 of extensions.conf 
+[May 26 03:04:23],Asterisk,18.17.1 built by root @ localhost.localdomain on a x86_64 running Linux on 2023-05-26 06:23:16 UTC 
+[May 26 03:04:23],NOTICE[76931],loader.c: 343 modules will be loaded. 
+[May 26 03:04:24],NOTICE[76931],res_config_ldap.c: No directory user found, anonymous binding as default. 
+[May 26 03:04:24],ERROR[76931],res_config_ldap.c: No directory URL or host found. 
+[May 26 03:04:24],ERROR[76931],res_config_ldap.c: Cannot load LDAP RealTime driver. 
+[May 26 03:04:24],ERROR[76931],res_config_pgsql.c: PostgreSQL RealTime: Failed to connect database asterisk on 127.0.0.1: 
+[May 26 03:04:24],WARNING[76931],res_config_pgsql.c: PostgreSQL RealTime: Couldn't establish connection. Check debug. 
+[May 26 03:04:24],NOTICE[76931],cdr.c: CDR simple logging enabled. 
+[May 26 03:04:24],WARNING[76931],config.c: parse error: No category context for line 310 of /etc/asterisk/geolocation.conf 
+[May 26 03:04:24],ERROR[76931],res_sorcery_config.c: Contents of config file 'geolocation.conf' are invalid and cannot be parsed 
+[May 26 03:04:24],WARNING[76931],config.c: parse error: No category context for line 310 of /etc/asterisk/geolocation.conf 
+[May 26 03:04:24],ERROR[76931],res_sorcery_config.c: Contents of config file 'geolocation.conf' are invalid and cannot be parsed 
+[May 26 03:04:24],WARNING[76931],res_phoneprov.c: Unable to find a valid server address or name. 
+[May 26 03:04:24],NOTICE[76931],res_smdi.c: No SMDI interfaces are available to listen on, not starting SMDI listener. 
+[May 26 03:04:24],NOTICE[76931],chan_dahdi.c: Ignoring any changes to 'userbase' (on reload) at line 23. 
+[May 26 03:04:24],NOTICE[76931],chan_dahdi.c: Ignoring any changes to 'vmsecret' (on reload) at line 31. 
+[May 26 03:04:24],NOTICE[76931],chan_dahdi.c: Ignoring any changes to 'hassip' (on reload) at line 35. 
+[May 26 03:04:24],NOTICE[76931],chan_dahdi.c: Ignoring any changes to 'hasiax' (on reload) at line 39. 
+[May 26 03:04:24],NOTICE[76931],chan_dahdi.c: Ignoring any changes to 'hasmanager' (on reload) at line 47. 
+[May 26 03:04:24],NOTICE[76931],chan_skinny.c: Configuring skinny from skinny.conf 
+[May 26 03:04:24],ERROR[76931],ari/config.c: No configured users for ARI 
+[May 26 03:04:24],NOTICE[76931],confbridge/conf_config_parser.c: Adding default_menu menu to app_confbridge 
+[May 26 03:04:24],NOTICE[76931],cdr_pgsql.c: cdr_pgsql configuration contains no global section, skipping module load. 
+[May 26 03:04:24],NOTICE[76931],cel_custom.c: No mappings found in cel_custom.conf. Not logging CEL to custom CSVs. 
+[May 26 03:04:24],WARNING[76931],cel_pgsql.c: CEL pgsql config file missing global section. 
+[May 26 03:04:24],WARNING[76931],pbx.c: Unable to register extension 's' priority 1 in 'usuarios', already in use 
+[May 26 03:04:24],WARNING[76931],pbx_config.c: Unable to register extension at line 940 of extensions.conf 
+[May 26 03:04:24],WARNING[76931],pbx.c: Unable to register extension 's' priority 2 in 'usuarios', already in use 
+[May 26 03:04:24],WARNING[76931],pbx_config.c: Unable to register extension at line 942 of extensions.conf 
+[May 26 03:04:24],WARNING[76931],pbx.c: Unable to register extension '2001' priority 1 in 'usuarios', already in use 
+[May 26 03:04:24],WARNING[76931],pbx_config.c: Unable to register extension at line 949 of extensions.conf 
+[May 26 03:04:24],WARNING[76931],pbx.c: Unable to register extension '2001' priority 2 in 'usuarios', already in use 
+[May 26 03:04:24],WARNING[76931],pbx_config.c: Unable to register extension at line 950 of extensions.conf 
+[May 26 03:04:24],WARNING[76931],pbx.c: Unable to register extension '2001' priority 3 in 'usuarios', already in use 
+[May 26 03:04:24],WARNING[76931],pbx_config.c: Unable to register extension at line 951 of extensions.conf 
+[May 26 03:04:24],ERROR[76931],codec_dahdi.c: Failed to open /dev/dahdi/transcode: No such file or directory 
+[May 26 03:04:24],WARNING[76931],loader.c: Some non-required modules failed to load. 
+[May 26 03:04:24],WARNING[76931],loader.c: Module 'res_monitor' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 21. Its replacement is 'app_mixmonitor'. 
+[May 26 03:04:24],WARNING[76931],loader.c: Module 'chan_mgcp' has been loaded but will be deprecated in Asterisk version 19 and will be removed in Asterisk version 21. 
+[May 26 03:04:24],WARNING[76931],loader.c: Module 'chan_skinny' has been loaded but will be deprecated in Asterisk version 19 and will be removed in Asterisk version 21. 
+[May 26 03:04:24],WARNING[76931],loader.c: Module 'chan_sip' has been loaded but was deprecated in Asterisk version 17 and will be removed in Asterisk version 21. 
+[May 26 03:04:24],WARNING[76931],loader.c: Module 'res_adsi' has been loaded but may be removed in a future release. 
+[May 26 03:04:24],WARNING[76931],loader.c: Module 'chan_oss' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 19. 
+[May 26 03:04:24],WARNING[76931],loader.c: Module 'app_nbscat' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 19. 
+[May 26 03:04:24],WARNING[76931],loader.c: Module 'app_dahdiras' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 19. 
+[May 26 03:04:24],WARNING[76931],loader.c: Module 'app_url' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 19. 
+[May 26 03:04:24],WARNING[76931],loader.c: Module 'app_adsiprog' has been loaded but may be removed in a future release. 
+[May 26 03:04:24],WARNING[76931],loader.c: Module 'app_getcpeid' has been loaded but may be removed in a future release. 
+[May 26 03:04:24],WARNING[76931],loader.c: Module 'app_ices' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 19. 
+[May 26 03:04:24],WARNING[76931],loader.c: Module 'app_image' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 19. 
+[May 26 03:04:24],ERROR[76931],loader.c: res_timing_dahdi declined to load. 
+[May 26 03:04:24],ERROR[76931],loader.c: res_pjsip_transport_websocket declined to load. 
+[May 26 03:04:24],ERROR[76931],loader.c: cdr_sqlite3_custom declined to load. 
+[May 26 03:04:24],ERROR[76931],loader.c: cdr_pgsql declined to load. 
+[May 26 03:04:24],ERROR[76931],loader.c: cel_sqlite3_custom declined to load. 
+[May 26 03:04:24],WARNING[76940],chan_sip.c: chan_sip has no official maintainer and is deprecated. Migration to 
+[May 26 03:04:24],WARNING[76940],chan_sip.c: chan_pjsip is recommended. See guides at the Asterisk Wiki: 
+[May 26 03:04:24],WARNING[76940],chan_sip.c: https://wiki.asterisk.org/wiki/display/AST/Migrating+from+chan_sip+to+res_pjsip 
+[May 26 03:04:24],WARNING[76940],chan_sip.c: https://wiki.asterisk.org/wiki/display/AST/Configuring+res_pjsip 
+[May 26 03:04:49],WARNING[77121][C-00000001],pbx_builtins.c: Timeout but no rule 't' or 'e' in context 'usuarios' 
+[May 26 03:05:22],NOTICE[77376][C-00000002],app_dial.c: Unable to create channel of type 'SIP' (cause 20 - Subscriber absent) 
+[May 26 06:44:22],NOTICE[77006],chan_sip.c: Registration from '"laura"<sip:2003@172.20.10.3;transport=UDP>' failed for '172.20.10.1:54528' - Wrong password 
+[May 26 06:44:24],NOTICE[77006],chan_sip.c: Registration from '"laura"<sip:2003@172.20.10.3;transport=UDP>' failed for '172.20.10.1:54528' - Wrong password 
+[May 26 06:44:26],NOTICE[77006],chan_sip.c: Registration from '"laura"<sip:2003@172.20.10.3;transport=UDP>' failed for '172.20.10.1:54528' - Wrong password 
+[May 26 06:44:32],NOTICE[77006],chan_sip.c: Registration from '"laura"<sip:2003@172.20.10.3;transport=UDP>' failed for '172.20.10.1:54528' - Wrong password 
+[May 26 06:46:28],NOTICE[77006],chan_sip.c: Registration from '"laura"<sip:2003@172.20.10.3;transport=UDP>' failed for '172.20.10.1:54528' - Wrong password 
+[May 26 06:46:32],NOTICE[77006],chan_sip.c: Registration from '"laura"<sip:2003@172.20.10.3;transport=UDP>' failed for '172.20.10.1:54528' - Wrong password 
+[May 26 06:48:30],NOTICE[77006],chan_sip.c: Registration from '"laura"<sip:2003@172.20.10.3;transport=UDP>' failed for '172.20.10.1:54528' - Wrong password 
+[May 26 06:48:35],NOTICE[77006],chan_sip.c: Registration from '"laura"<sip:2003@172.20.10.3;transport=UDP>' failed for '172.20.10.1:54528' - Wrong password 
+[May 27 05:23:43],Asterisk,18.17.1 built by root @ localhost.localdomain on a x86_64 running Linux on 2023-05-26 06:23:16 UTC 
+[May 27 05:23:43],NOTICE[17369],loader.c: 343 modules will be loaded. 
+[May 27 05:23:43],NOTICE[17369],res_config_ldap.c: No directory user found, anonymous binding as default. 
+[May 27 05:23:43],ERROR[17369],res_config_ldap.c: No directory URL or host found. 
+[May 27 05:23:43],ERROR[17369],res_config_ldap.c: Cannot load LDAP RealTime driver. 
+[May 27 05:23:43],ERROR[17369],res_config_pgsql.c: PostgreSQL RealTime: Failed to connect database asterisk on 127.0.0.1: 
+[May 27 05:23:43],WARNING[17369],res_config_pgsql.c: PostgreSQL RealTime: Couldn't establish connection. Check debug. 
+[May 27 05:23:43],NOTICE[17369],cdr.c: CDR simple logging enabled. 
+[May 27 05:23:43],WARNING[17369],config.c: parse error: No category context for line 310 of /etc/asterisk/geolocation.conf 
+[May 27 05:23:43],ERROR[17369],res_sorcery_config.c: Contents of config file 'geolocation.conf' are invalid and cannot be parsed 
+[May 27 05:23:43],WARNING[17369],config.c: parse error: No category context for line 310 of /etc/asterisk/geolocation.conf 
+[May 27 05:23:43],ERROR[17369],res_sorcery_config.c: Contents of config file 'geolocation.conf' are invalid and cannot be parsed 
+[May 27 05:23:43],WARNING[17369],res_phoneprov.c: Unable to find a valid server address or name. 
+[May 27 05:23:43],NOTICE[17369],res_smdi.c: No SMDI interfaces are available to listen on, not starting SMDI listener. 
+[May 27 05:23:43],NOTICE[17369],chan_dahdi.c: Ignoring any changes to 'userbase' (on reload) at line 23. 
+[May 27 05:23:43],NOTICE[17369],chan_dahdi.c: Ignoring any changes to 'vmsecret' (on reload) at line 31. 
+[May 27 05:23:43],NOTICE[17369],chan_dahdi.c: Ignoring any changes to 'hassip' (on reload) at line 35. 
+[May 27 05:23:43],NOTICE[17369],chan_dahdi.c: Ignoring any changes to 'hasiax' (on reload) at line 39. 
+[May 27 05:23:43],NOTICE[17369],chan_dahdi.c: Ignoring any changes to 'hasmanager' (on reload) at line 47. 
+[May 27 05:23:43],NOTICE[17369],chan_skinny.c: Configuring skinny from skinny.conf 
+[May 27 05:23:43],ERROR[17369],ari/config.c: No configured users for ARI 
+[May 27 05:23:43],NOTICE[17369],confbridge/conf_config_parser.c: Adding default_menu menu to app_confbridge 
+[May 27 05:23:43],NOTICE[17369],cdr_pgsql.c: cdr_pgsql configuration contains no global section, skipping module load. 
+[May 27 05:23:43],NOTICE[17369],cel_custom.c: No mappings found in cel_custom.conf. Not logging CEL to custom CSVs. 
+[May 27 05:23:43],WARNING[17369],cel_pgsql.c: CEL pgsql config file missing global section. 
+[May 27 05:23:43],WARNING[17369],pbx.c: Unable to register extension 's' priority 1 in 'usuarios', already in use 
+[May 27 05:23:43],WARNING[17369],pbx_config.c: Unable to register extension at line 940 of extensions.conf 
+[May 27 05:23:43],WARNING[17369],pbx.c: Unable to register extension 's' priority 2 in 'usuarios', already in use 
+[May 27 05:23:43],WARNING[17369],pbx_config.c: Unable to register extension at line 942 of extensions.conf 
+[May 27 05:23:43],WARNING[17369],pbx.c: Unable to register extension '2001' priority 1 in 'usuarios', already in use 
+[May 27 05:23:43],WARNING[17369],pbx_config.c: Unable to register extension at line 949 of extensions.conf 
+[May 27 05:23:43],WARNING[17369],pbx.c: Unable to register extension '2001' priority 2 in 'usuarios', already in use 
+[May 27 05:23:43],WARNING[17369],pbx_config.c: Unable to register extension at line 950 of extensions.conf 
+[May 27 05:23:43],WARNING[17369],pbx.c: Unable to register extension '2001' priority 3 in 'usuarios', already in use 
+[May 27 05:23:43],WARNING[17369],pbx_config.c: Unable to register extension at line 951 of extensions.conf 
+[May 27 05:23:43],ERROR[17369],codec_dahdi.c: Failed to open /dev/dahdi/transcode: No such file or directory 
+[May 27 05:23:43],WARNING[17369],loader.c: Some non-required modules failed to load. 
+[May 27 05:23:44],WARNING[17369],loader.c: Module 'res_monitor' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 21. Its replacement is 'app_mixmonitor'. 
+[May 27 05:23:44],WARNING[17369],loader.c: Module 'chan_mgcp' has been loaded but will be deprecated in Asterisk version 19 and will be removed in Asterisk version 21. 
+[May 27 05:23:44],WARNING[17369],loader.c: Module 'chan_skinny' has been loaded but will be deprecated in Asterisk version 19 and will be removed in Asterisk version 21. 
+[May 27 05:23:44],WARNING[17369],loader.c: Module 'chan_sip' has been loaded but was deprecated in Asterisk version 17 and will be removed in Asterisk version 21. 
+[May 27 05:23:44],WARNING[17369],loader.c: Module 'res_adsi' has been loaded but may be removed in a future release. 
+[May 27 05:23:44],WARNING[17369],loader.c: Module 'chan_oss' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 19. 
+[May 27 05:23:44],WARNING[17369],loader.c: Module 'app_nbscat' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 19. 
+[May 27 05:23:44],WARNING[17369],loader.c: Module 'app_dahdiras' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 19. 
+[May 27 05:23:44],WARNING[17369],loader.c: Module 'app_url' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 19. 
+[May 27 05:23:44],WARNING[17369],loader.c: Module 'app_adsiprog' has been loaded but may be removed in a future release. 
+[May 27 05:23:44],WARNING[17369],loader.c: Module 'app_getcpeid' has been loaded but may be removed in a future release. 
+[May 27 05:23:44],WARNING[17369],loader.c: Module 'app_ices' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 19. 
+[May 27 05:23:44],WARNING[17369],loader.c: Module 'app_image' has been loaded but was deprecated in Asterisk version 16 and will be removed in Asterisk version 19. 
+[May 27 05:23:44],ERROR[17369],loader.c: res_pjsip_transport_websocket declined to load. 
+[May 27 05:23:44],ERROR[17369],loader.c: cdr_sqlite3_custom declined to load. 
+[May 27 05:23:44],ERROR[17369],loader.c: cdr_pgsql declined to load. 
+[May 27 05:23:44],ERROR[17369],loader.c: cel_sqlite3_custom declined to load. 
+[May 27 05:23:44],WARNING[17375],chan_sip.c: chan_sip has no official maintainer and is deprecated. Migration to 
+[May 27 05:23:44],WARNING[17375],chan_sip.c: chan_pjsip is recommended. See guides at the Asterisk Wiki: 
+[May 27 05:23:44],WARNING[17375],chan_sip.c: https://wiki.asterisk.org/wiki/display/AST/Migrating+from+chan_sip+to+res_pjsip 
+[May 27 05:23:44],WARNING[17375],chan_sip.c: https://wiki.asterisk.org/wiki/display/AST/Configuring+res_pjsip 
+[May 27 05:24:36],NOTICE[17439],chan_sip.c: Registration from '<sip:2001@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:24:36],NOTICE[17439],chan_sip.c: Registration from '"laura"<sip:2003@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:25:09],NOTICE[17439],chan_sip.c: Registration from '<sip:2001@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:25:09],NOTICE[17439],chan_sip.c: Registration from '"laura"<sip:2003@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:25:41],NOTICE[17439],chan_sip.c: Registration from '<sip:2001@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:25:41],NOTICE[17439],chan_sip.c: Registration from '"laura"<sip:2003@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:26:13],NOTICE[17439],chan_sip.c: Registration from '<sip:2001@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:26:13],NOTICE[17439],chan_sip.c: Registration from '"laura"<sip:2003@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:39:14],NOTICE[17439],chan_sip.c: Registration from '<sip:2001@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:39:14],NOTICE[17439],chan_sip.c: Registration from '"laura"<sip:2003@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:39:22],NOTICE[17439],chan_sip.c: Registration from '"laura"<sip:1002@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:39:24],NOTICE[17439],chan_sip.c: Registration from '"laura"<sip:1002@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:39:26],NOTICE[17439],chan_sip.c: Registration from '"laura"<sip:1002@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:39:32],NOTICE[17439],chan_sip.c: Registration from '"laura"<sip:1002@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:39:42],NOTICE[17439],chan_sip.c: Registration from '"laura"<sip:1002@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:39:46],NOTICE[17439],chan_sip.c: Registration from '<sip:2001@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:39:59],NOTICE[23743][C-00000001],app_dial.c: Unable to create channel of type 'SIP' (cause 20 - Subscriber absent) 
+[May 27 05:40:04],NOTICE[17439],chan_sip.c: Registration from '"laura"<sip:1002@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:40:14],NOTICE[17439],chan_sip.c: Registration from '"laura"<sip:1002@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:42:44],NOTICE[17439][C-00000002],chan_sip.c: Failed to authenticate device <sip:2004@172.20.10.3;transport=UDP>;tag=bab9745d for INVITE, code = -1 
+[May 27 05:42:55],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.4:59770' - Wrong password 
+[May 27 05:43:15],NOTICE[17439],chan_sip.c: Registration from '"laura"<sip:1002@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:43:15],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:43:20],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:43:28],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:43:45],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:43:47],NOTICE[17439],chan_sip.c: Registration from '<sip:2001@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 27 05:43:47],NOTICE[17439],chan_sip.c: Registration from '"laura"<sip:1002@172.20.10.3;transport=UDP>' failed for '172.20.10.1:49688' - Wrong password 
+[May 28 13:16:08],NOTICE[17439],chan_sip.c: Registration from '<sip:1002@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:16:08],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:16:09],NOTICE[17439],chan_sip.c: Registration from '<sip:1002@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:16:09],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:16:12],NOTICE[17439],chan_sip.c: Registration from '<sip:1002@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:16:12],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:16:17],NOTICE[17439],chan_sip.c: Registration from '<sip:1002@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:16:17],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:16:29],NOTICE[17439],chan_sip.c: Registration from '<sip:1002@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:16:29],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:16:50],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:17:01],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:17:22],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:17:33],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:17:54],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:18:05],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:18:26],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:18:38],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:18:59],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:19:10],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:19:31],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:19:42],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:20:03],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:20:15],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:20:36],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:20:47],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:21:08],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:21:19],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:21:40],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:21:52],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:22:13],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:22:24],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:24:03],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:24:35],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:25:07],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:25:39],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:26:12],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:26:44],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:27:16],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:27:49],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:28:21],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:30:40],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:31:12],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:31:44],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:32:17],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:35:29],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:39:20],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:53:25],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:53:36],NOTICE[17439],chan_sip.c: Registration from '<sip:1001@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:53:38],NOTICE[17439],chan_sip.c: Registration from '<sip:1001@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:53:39],NOTICE[17439],chan_sip.c: Registration from '<sip:1001@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:53:41],NOTICE[17439],chan_sip.c: Registration from '<sip:1001@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:53:43],NOTICE[17439],chan_sip.c: Registration from '<sip:1001@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:53:46],NOTICE[17439],chan_sip.c: Registration from '<sip:1001@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:53:48],NOTICE[17439],chan_sip.c: Registration from '<sip:1001@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:53:50],NOTICE[17439],chan_sip.c: Registration from '<sip:1001@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:53:57],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:54:29],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:55:02],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:55:34],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:56:06],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:56:38],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:57:11],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:57:43],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:58:15],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:58:48],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:59:20],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 13:59:52],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 14:00:25],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 14:03:30],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 14:04:02],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 14:09:27],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 14:10:41],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 28 14:11:13],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 01:21:19],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 01:21:52],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 01:22:24],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 01:22:57],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 01:23:29],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 01:24:01],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 01:24:53],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 01:25:25],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 02:44:55],NOTICE[177705][C-00000004],app_dial.c: Unable to create channel of type 'SIP' (cause 20 - Subscriber absent) 
+[May 29 02:45:15],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 02:45:42],NOTICE[178108][C-00000005],app_dial.c: Unable to create channel of type 'SIP' (cause 20 - Subscriber absent) 
+[May 29 02:45:47],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 02:46:19],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 02:49:13],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 02:49:46],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 03:39:28],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 03:40:00],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 03:40:32],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 03:41:05],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 03:44:45],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 03:49:59],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 04:35:11],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 04:35:44],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 04:36:16],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 04:37:27],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 04:37:59],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 04:38:32],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 04:39:04],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 04:39:36],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 04:50:07],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 04:50:39],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 04:51:11],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 04:55:42],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 04:56:15],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 04:56:47],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 05:02:34],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 
+[May 29 05:03:07],NOTICE[17439],chan_sip.c: Registration from '<sip:2004@172.20.10.3;transport=UDP>' failed for '172.20.10.1:57663' - Wrong password 

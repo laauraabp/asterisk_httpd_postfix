@@ -1,0 +1,74 @@
+---
+- hosts: servidores
+  become: yes
+  tasks:
+  ### copiar en /usr/src todos los paquetes
+  ### copiar hosts en remoto
+    - name: Instalar clufter
+      shell: yum install ./clufter-* -y
+    - name: Instalar libkinet
+      shell: yum install ./libknet1-* -y
+    - name: Instalar corosync
+      shell: yum install ./corosync* -y
+    - name: Instalar overpass
+      shell: yum install ./overpass-fonts-3.0.2-3.el8.noarch.rpm -y
+    - name: Instalar python
+      shell: yum install ./python3-* -y
+    - name: Instalar resource agents
+      shell: yum install ./resource-agents-4.9.0-29.el8.x86_64.rpm -y
+    - name: Instalar ruby
+      shell: yum install ./ruby* -y
+    - name: Instalar pacemaker
+      shell: yum install ./pacemaker-* -y
+    - name: Instalar pcs
+      shell: yum install ./pcs-0.10.14-5.el8.x86_64.rpm -y
+    - name: Descomprimir jansson
+      unarchive:
+        src: /usr/src/jansson-2.12.tar.bz2
+        dest: /usr/src
+        remote_src: yes  
+    - name: ./configure en Jansson
+      shell: ./configure
+      ignore_errors: true
+      args:
+        chdir: /usr/src/jansson-2.12
+    - name: Descomprimir jansson
+      unarchive:
+        src: /usr/src/pjproject-2.12.1.tar.bz2
+        dest: /usr/src
+        remote_src: yes  
+    - name: ./configure en pjproject
+      shell: ./configure
+      ignore_errors: true
+      args:
+        chdir: /usr/src/pjproject-2.12.1
+    - name: make en pjproject
+      shell: make
+      ignore_errors: true
+      args:
+        chdir: /usr/src/pjproject-2.12.1
+    - name: Parar firewall
+      systemd:
+        name: firewalld
+        state: stoped
+    - name: Desactivar Selinux
+      shell: setenforce 0
+    - name: Habilitar pcsd
+      systemd:
+        name: pcsd
+        state: enabled
+    - name: Habilitar pacemaker
+      systemd:
+        name: pacemaker
+        state: enabled
+    - name: Habilitar corosync
+      systemd:
+        name: corosync
+        state: enabled
+    - name: Iniciar pcsd
+      systemd:
+        name: pcsd
+        state: started
+
+#### passwd hacluster
+
