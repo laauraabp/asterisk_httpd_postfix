@@ -9,7 +9,7 @@ global $version;
 $config_version = '1.4.0';
 $config_use_color = 1;
 
-$org_name      = "Laura local mail server";
+$org_name      = "Televoice";
 $org_logo      = SM_PATH . 'images/sm_logo.png';
 $org_logo_width  = '308';
 $org_logo_height = '111';
@@ -19,10 +19,13 @@ $frame_top     = '_top';
 
 $provider_uri     = 'http://squirrelmail.org/';
 
+$provider_name     = 'SquirrelMail';
 
 $motd = "";
 
 $squirrelmail_default_language = 'en_US';
+$default_charset       = 'iso-8859-1';
+$lossy_encoding        = false;
 
 $domain                 = 'laura.local';
 $imapServerAddress      = 'localhost';
@@ -31,10 +34,13 @@ $useSendmail            = false;
 $smtpServerAddress      = 'localhost';
 $smtpPort               = 25;
 $sendmail_path          = '/usr/sbin/sendmail';
+$sendmail_args          = '-i -t';
 $pop_before_smtp        = false;
+$pop_before_smtp_host   = '';
 $imap_server_type       = 'uw';
 $invert_time            = false;
 $optional_delimiter     = '/';
+$encode_header_key      = '';
 
 $default_folder_prefix          = 'mail/';
 $trash_folder                   = 'Trash';
@@ -55,7 +61,6 @@ $auto_create_special            = true;
 $delete_folder                  = false;
 $noselect_fix_enable            = false;
 
-$default_charset          = 'iso-8859-1';
 $data_dir                 = '/var/lib/squirrelmail/prefs/';
 $attachment_dir           = '/var/spool/squirrelmail/attach/';
 $dir_hash_level           = 0;
@@ -66,6 +71,8 @@ $hide_sm_attributions     = false;
 $default_use_mdn          = true;
 $edit_identity            = true;
 $edit_name                = true;
+$edit_reply_to            = true;
+$hide_auth_header         = false;
 $allow_thread_sort        = true;
 $allow_server_sort        = true;
 $allow_charset_search     = true;
@@ -149,6 +156,11 @@ $theme[34]['PATH'] = SM_PATH . 'themes/penguin.php';
 $theme[34]['NAME'] = 'Penguin';
 
 $default_use_javascript_addr_book = false;
+$abook_global_file = '';
+$abook_global_file_writeable = false;
+$abook_global_file_listing = true;
+$abook_file_line_length = 2048;
+
 $addrbook_dsn = '';
 $addrbook_table = 'address';
 
@@ -157,20 +169,31 @@ $prefs_table = 'userprefs';
 $prefs_user_field = 'user';
 $prefs_key_field = 'prefkey';
 $prefs_val_field = 'prefval';
+$addrbook_global_dsn = '';
+$addrbook_global_table = 'global_abook';
+$addrbook_global_writeable = false;
+$addrbook_global_listing = false;
+
 $no_list_for_subscribe = false;
 $smtp_auth_mech = 'none';
 $imap_auth_mech = 'login';
-$use_imap_tls = false;
-$use_smtp_tls = false;
+$smtp_sitewide_user = '';
+$smtp_sitewide_pass = '';
+$use_imap_tls = 0;
+$use_smtp_tls = 0;
+$display_imap_login_error = false;
+$allow_svg_display = false;
+$block_svg_download = false;
+$fix_broken_base64_encoded_messages = false;
 $session_name = 'SQMSESSID';
+$only_secure_cookies     = true;
+$disable_security_tokens = false;
+$check_referrer          = '';
+$browser_rendering_mode  = 'quirks';
+$use_transparent_security_image = true;
+$check_mail_mechanism  = 'meta';
+
+$config_location_base    = '';
 
 @include SM_PATH . 'config/config_local.php';
 
-/**
- * Make sure there are no characters after the PHP closing
- * tag below (including newline characters and whitespace).
- * Otherwise, that character will cause the headers to be
- * sent and regular output to begin, which will majorly screw
- * things up when we try to send more headers later.
- */
-?>
