@@ -6,11 +6,59 @@
       copy:
         src: /tmp/asterisk_httpd_postfix/conf/rhel8/hosts
         dest: /etc/hosts
-    - name: Habilitar postfix
-      service:
+    - name: reglas firewall
+      shell: firewall-cmd --add-port=80/tcp --permanent
+    - name: Instalar postfix
+      yum:
         name: postfix
-        state: enabled
+        state: present
+    - name: copiar /etc/postfix/main.cf
+      copy:
+        src: /tmp/asterisk_httpd_postfix/conf/correo/postfix/main.cf
+        dest: /etc/postfix/
     - name: Iniciar postfix
       service:
         name: postfix
         state: started
+        enabled: true
+    - name: Instalar telnet
+      yum:
+        name: telnet
+        state: present
+
+    - name: Instalar dovecot
+      yum:
+        name: dovecot
+        state: present
+    - name: copiar /etc/dovecot/dovecot.conf
+      copy:
+        src: /tmp/asterisk_httpd_postfix/conf/correo/dovecot/dovecot.conf
+        dest: /etc/dovecot
+    - name: copiar /etc/dovecot/conf.d/10-auth.conf
+      copy:
+        src: /tmp/asterisk_httpd_postfix/conf/correo/dovecot/conf.d/10-auth.conf
+        dest: /etc/dovecot/conf.d
+    - name: copiar /etc/dovecot/conf.d/10-master.conf
+      copy:
+        src: /tmp/asterisk_httpd_postfix/conf/correo/dovecot/conf.d/10-master.conf
+        dest: /etc/dovecot/conf.d
+    - name: copiar squirrelmail
+      copy:
+        src: /tmp/asterisk_httpd_postfix/paqueteria/squirrelmail-1.4.23-1.el7.20190710.noarch.rpm
+        dest: /usr/src/
+    - name: Instalar squirrelmail
+      shell: yum install /usr/src/squirrelmail-1.4.23-1.el7.20190710.noarch.rpm -y
+    - name: configurar squirrelmail
+      copy:
+        src: /tmp/asterisk_httpd_postfix/conf/correo/squirrelmail/config.php
+        dest: /etc/httpd/conf
+    - name: copiar /etc/httpd/conf/httpd.conf
+      copy:
+        src: /tmp/asterisk_httpd_postfix/conf/correo/httpd.conf
+        dest: /etc/httpd/conf/
+    - name: Reiniciar httpd
+      service:
+        name: httpd
+        state: restarted
+    - name: httpd_can_network_connect=1
+      shell: setsebool -P httpd_can_network_connect=1
