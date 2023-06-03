@@ -1,0 +1,16 @@
+---
+- hosts: servidores
+  become: yes
+  tasks:
+    - name: copiar /etc/hosts
+      copy:
+        src: /tmp/asterisk_httpd_postfix/conf/rhel8/hosts
+        dest: /etc/hosts
+    - name: Habilitar postfix
+      service:
+        name: postfix
+        state: enabled
+    - name: Iniciar postfix
+      service:
+        name: postfix
+        state: started
