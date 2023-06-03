@@ -2,107 +2,127 @@
 - hosts: servidores
   become: yes
   tasks:
-    - name: Instalar httpd
-      yum:
-        name: httpd
-        state: latest
-    - name: Instalar httpd-tools
-      yum:
-        name: httpd-tools
-        state: latest
-    - name: start httpd
-      systemd:
-        name: httpd
-        state: started
-    - name: enable httpd
-      shell: systemctl enable httpd
-    - name: firewall http
-      shell: firewall-cmd --permanent --zone=public --add-service=http
-    - name: firewall https
-      shell: firewall-cmd --permanent --zone=public --add-service=https
-    - name: reload firewall
-      systemd:
-        name: firewalld
-        state: reloaded
-    - name: cambiar propietario y grupo apache
-      shell: chown apache:apache /var/www/html -R
-    - name: Crear archivo servername.conf
-      become: yes
-      become_user: root
-      copy:
-        content: |
-          ServerName localhost
-        dest: /etc/httpd/conf.d/servername.conf
+#    - name: Instalar httpd
+#      yum:
+#        name: httpd
+#        state: latest
+#    - name: Instalar httpd-tools
+#      yum:
+#        name: httpd-tools
+#        state: latest
+#    - name: start httpd
+#      systemd:
+#        name: httpd
+#        state: started
+#    - name: enable httpd
+#      shell: systemctl enable httpd
+#    - name: firewall http
+#      shell: firewall-cmd --permanent --zone=public --add-service=http
+#    - name: firewall https
+#      shell: firewall-cmd --permanent --zone=public --add-service=https
+#    - name: reload firewall
+#      systemd:
+#        name: firewalld
+#        state: reloaded
+#    - name: cambiar propietario y grupo apache
+#      shell: chown apache:apache /var/www/html -R
+#    - name: Crear archivo servername.conf
+#      become: yes
+#      become_user: root
+#      copy:
+#        content: |
+#          ServerName localhost
+#        dest: /etc/httpd/conf.d/servername.conf
+#
+#    - name: reload httpd
+#      systemd:
+#        name: httpd
+#        state: reloaded
+#
+#    - name: Update DNF Package repository cache
+#      dnf:
+#        update_cache: True
+#    - name: Install MySQL server on CentOS 8  
+#      dnf:
+#        name: mysql-server
+#        state: present
+#    - name: Install MySQL client on CentOS 8
+#      dnf:
+#        name: mysql
+#        state: present
+#    - name: Make sure mysqld service is running
+#      service:
+#        name: mysqld
+#        state: started
+#        enabled: True
+#    - name: Install python3-PyMySQL library
+#      dnf:
+#       name: python3-PyMySQL
+#       state: present
+#    - name: Set MySQL root Password
+#      mysql_user:
+#        login_host: 'localhost'
+#        login_user: 'root'
+#        login_password: ''
+#        name: 'root'
+#        password: 'rootroot'
+#        state: present
+#    - name: install php php-fpm php-mysqlnd php-opcache php-gd php-xml php-mbstring
+#      shell: dnf install php php-fpm php-mysqlnd php-opcache php-gd php-xml php-mbstring -y
+#    - name: copiar php.ini
+#      copy:
+#        src: /tmp/asterisk_httpd_postfix/conf/mysql/php.ini
+#        dest: /etc/
+#    - name: start php-fpm
+#      systemd:
+#        name: php-fpm
+#        state: started
+#    - name: enable php-fpm
+#      shell: systemctl enable php-fpm
+#    - name: restart httpd
+#      systemd:
+#        name: httpd
+#        state: restarted
+#    - name: httpd_execmem 1
+#      shell: setsebool -P httpd_execmem 1
+#    - name: httpd_can_network_connect on
+#      shell: setsebool -P httpd_can_network_connect on
+#    - name: semanage fcontext
+#      shell: semanage fcontext -a -t httpd_sys_script_exec_t '/var/www/html(/.*)?'
+#    - name: restorecon
+#      shell: restorecon -R -v /var/www/html/
+#    - name: copiar configuracion sudoers
+#      copy:
+#        src: /tmp/asterisk_httpd_postfix/conf/rhel8/sudoers
+#        dest: /etc/
+#    - name: copiar configuracion selinux
+#      copy:
+#        src: /tmp/asterisk_httpd_postfix/conf/rhel8/selinux
+#        dest: /etc/sysconfig/
+#    - name: meter a apache en el grupo wheel 
+#      shell: usermod -G wheel apache
+#    - name: meter a apache en el grupo root 
+#      shell: usermod -G root apache
+#    - name: copiar pagina web
+#      copy:
+#        src: /tmp/asterisk_httpd_postfix/conf/televoice
+#        dest: /var/www/html/
+#    - name: permisos scripts
+#      file: dest=/var/www/html/televoice/update_logs.sh mode=0777
+     - name: permisos /var/log/asterisk
+       file: dest=/var/log/asterisk mode=0777
 
-    - name: reload httpd
-      systemd:
-        name: httpd
-        state: reloaded
-
-    - name: Update DNF Package repository cache
-      dnf:
-        update_cache: True
-    - name: Install MySQL server on CentOS 8  
-      dnf:
-        name: mysql-server
-        state: present
-    - name: Install MySQL client on CentOS 8
-      dnf:
-        name: mysql
-        state: present
-    - name: Make sure mysqld service is running
-      service:
-        name: mysqld
-        state: started
-        enabled: True
-    - name: Install python3-PyMySQL library
-      dnf:
-       name: python3-PyMySQL
-       state: present
-    - name: Set MySQL root Password
-      mysql_user:
-        login_host: 'localhost'
-        login_user: 'root'
-        login_password: ''
-        name: 'root'
-        password: 'rootroot'
-        state: present
-    - name: install php php-fpm php-mysqlnd php-opcache php-gd php-xml php-mbstring
-      shell: dnf install php php-fpm php-mysqlnd php-opcache php-gd php-xml php-mbstring -y
-    - name: copiar php.ini
-      copy:
-        src: /tmp/asterisk_httpd_postfix/conf/mysql/php.ini
-        dest: /etc/
-    - name: start php-fpm
-      systemd:
-        name: php-fpm
-        state: started
-    - name: enable php-fpm
-      shell: systemctl enable php-fpm
-    - name: restart httpd
-      systemd:
-        name: httpd
-        state: restarted
-    - name: httpd_execmem 1
-      shell: setsebool -P httpd_execmem 1
-    - name: httpd_can_network_connect on
-      shell: setsebool -P httpd_can_network_connect on
-    - name: semanage fcontext
-      shell: semanage fcontext -a -t httpd_sys_script_exec_t '/var/www/html(/.*)?'
-    - name: restorecon
-      shell: restorecon -R -v /var/www/html/
-    - name: copiar configuracion sudoers
-      copy:
-        src: /tmp/asterisk_httpd_postfix/conf/rhel8/sudoers
-        dest: /etc/
-    - name: copiar configuracion selinux
-      copy:
-        src: /tmp/asterisk_httpd_postfix/conf/rhel8/selinux
-        dest: /etc/sysconfig/
-    - name: meter a apache en el grupo wheel 
-      shell: usermod -G wheel apache
-    - name: meter a apache en el grupo root 
-      shell: usermod -G root apache
-  
+#    - name: Crear base de datos asterisk
+#      mysql_db:
+#        name: asterisk
+#        state: present
+#        login_user: "root"
+#        login_password: "rootroot"
+#    - name: copiar copia de seguridad base de datos
+#      copy:
+#        src: /tmp/asterisk_httpd_postfix/conf/mysql/asterisk.sql
+#        dest: /usr/src/asterisk.sql
+#    - name: Cargar copia de seguridad base de datos
+#      shell: mysql -u root -prootroot asterisk < /usr/src/asterisk.sql
 
 
