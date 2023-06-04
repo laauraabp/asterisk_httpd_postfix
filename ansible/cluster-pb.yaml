@@ -4,71 +4,123 @@
   tasks:
   ### copiar en /usr/src todos los paquetes
   ### copiar hosts en remoto
-    - name: Instalar clufter
-      shell: yum install ./clufter-* -y
-    - name: Instalar libkinet
-      shell: yum install ./libknet1-* -y
-    - name: Instalar corosync
-      shell: yum install ./corosync* -y
-    - name: Instalar overpass
-      shell: yum install ./overpass-fonts-3.0.2-3.el8.noarch.rpm -y
-    - name: Instalar python
-      shell: yum install ./python3-* -y
-    - name: Instalar resource agents
-      shell: yum install ./resource-agents-4.9.0-29.el8.x86_64.rpm -y
-    - name: Instalar ruby
-      shell: yum install ./ruby* -y
-    - name: Instalar pacemaker
-      shell: yum install ./pacemaker-* -y
-    - name: Instalar pcs
-      shell: yum install ./pcs-0.10.14-5.el8.x86_64.rpm -y
-    - name: Descomprimir jansson
-      unarchive:
-        src: /usr/src/jansson-2.12.tar.bz2
-        dest: /usr/src
-        remote_src: yes  
-    - name: ./configure en Jansson
-      shell: ./configure
-      ignore_errors: true
-      args:
-        chdir: /usr/src/jansson-2.12
-    - name: Descomprimir jansson
-      unarchive:
-        src: /usr/src/pjproject-2.12.1.tar.bz2
-        dest: /usr/src
-        remote_src: yes  
-    - name: ./configure en pjproject
-      shell: ./configure
-      ignore_errors: true
-      args:
-        chdir: /usr/src/pjproject-2.12.1
-    - name: make en pjproject
-      shell: make
-      ignore_errors: true
-      args:
-        chdir: /usr/src/pjproject-2.12.1
-    - name: Parar firewall
-      systemd:
-        name: firewalld
-        state: stoped
-    - name: Desactivar Selinux
-      shell: setenforce 0
-    - name: Habilitar pcsd
-      systemd:
-        name: pcsd
-        state: enabled
-    - name: Habilitar pacemaker
-      systemd:
-        name: pacemaker
-        state: enabled
-    - name: Habilitar corosync
-      systemd:
-        name: corosync
-        state: enabled
-    - name: Iniciar pcsd
-      systemd:
-        name: pcsd
-        state: started
+#    - name: Copiar HA
+#      copy: 
+#        src: /tmp/asterisk_httpd_postfix/paqueteria/HA.tar
+#        dest: /usr/src/
+#    - name: Descomprimir HA
+#      unarchive:
+#        src: /usr/src/HA.tar
+#        dest: /usr/src
+#        remote_src: yes  
+#    - name: Instalar clufter
+#      shell: yum install /usr/src/HA/clufter-* -y
+#    - name: Instalar libkinet
+#      shell: yum install /usr/src/HA/libknet1-* -y
+#    - name: Instalar corosync
+#      shell: yum install /usr/src/HA/corosync* -y
+#    - name: Instalar overpass
+#      shell: yum install /usr/src/HA/overpass-fonts-3.0.2-3.el8.noarch.rpm -y
+#    - name: Instalar python
+#      shell: yum install /usr/src/HA/python3-* -y
+#    - name: Instalar resource agents
+#      shell: yum install /usr/src/HA/resource-agents-4.9.0-29.el8.x86_64.rpm -y
+#    - name: Instalar ruby
+#      shell: yum install /usr/src/HA/ruby* -y
+#    - name: Instalar pacemaker
+#      shell: yum install /usr/src/HA/pacemaker-* -y
+#    - name: Instalar pcs
+#      shell: yum install /usr/src/HA/pcs-0.10.14-5.el8.x86_64.rpm -y
+#    - name: Descomprimir jansson
+#      unarchive:
+#        src: /usr/src/HA/jansson-2.12.tar.bz2
+#        dest: /usr/src/HA
+#        remote_src: yes  
+#    - name: ./configure en Jansson
+#      shell: ./configure
+#      ignore_errors: true
+#      args:
+#        chdir: /usr/src/HA/jansson-2.12
+#    - name: Descomprimir jansson
+#      unarchive:
+#        src: /usr/src/HA/pjproject-2.12.1.tar.bz2
+#        dest: /usr/src/HA
+#        remote_src: yes  
+#    - name: ./configure en pjproject
+#      shell: ./configure
+#      ignore_errors: true
+#      args:
+#        chdir: /usr/src/HA/pjproject-2.12.1
+#    - name: make en pjproject
+#      shell: make
+#      ignore_errors: true
+#      args:
+#        chdir: /usr/src/HA/pjproject-2.12.1
+#    - name: Parar firewall
+#      systemd:
+#        name: firewalld
+#        state: stopped
+#    - name: Desactivar Selinux
+#      shell: setenforce 0
+#    - name: Habilitar pcsd
+#      systemd:
+#        name: pcsd
+#        state: started
+#        enabled: true
+#    - name: Habilitar corosync
+#      systemd:
+#        name: corosync
+#        enabled: true
+#    - name: Habilitar pacemaker
+#      systemd:
+#        name: pacemaker
+#        enabled: true
+
+
+
+#    - name: Iniciar pcsd
+#      systemd:
+#        name: pcsd
+#        state: started
+#    - name: Iniciar pacemaker
+#      systemd:
+#        name: pacemaker
+#        state: started
+#    - name: Iniciar pcsd
+#      systemd:
+#        name: pcsd
+#        state: started
+
+#    - name: Cambiar contraseña del usuario hacluster
+#      user:
+#        name: hacluster
+#        password: "{{ '123456' | password_hash('sha512') }}"
+#
+#    - name: pcs host auth nodo1 nodo2 -u hacluster -p usuario
+#      shell: pcs host auth -u hacluster -p 123456 nodo1 nodo2
+#    - name: pcs cluster setup CLUSTER nodo1 nodo2
+#      shell: pcs cluster setup CLUSTER nodo1 nodo2
+#    - name: pcs cluster enable --all
+#      shell: pcs cluster enable --all
+#    - name: pcs cluster start --all
+#      shell: pcs cluster start --all
+#    - name: pcs property set stonith-enabled=false
+#      shell: pcs property set stonith-enabled=false
+#    - name: pcs property set no-quorun-policy=ignore --force
+#      shell: pcs property set no-quorun-policy=ignore --force
+
+#    - name: copiar /usr/lib/ocf/resource.d/heartbeat/asterisk
+#      copy:
+#        src: /tmp/asterisk_httpd_postfix/conf/cluster/asterisk
+#        dest: /usr/lib/ocf/resource.d/heartbeat/
+#        
+#    - name: Cambiar permisos /usr/lib/ocf/resource.d/heartbeat/asterisk
+#      file: dest=/usr/lib/ocf/resource.d/heartbeat/asterisk mode=0755
+
+#    - name: virtual_ip
+#      shell: pcs resource create virtual_ip ocf:heartbeat:IPaddr2 ip=172.20.10.14 cidr_netmask=28 op monitor interval=30s
+    - name: asterisk
+      shell: pcs resource create asterisk ocf:heartbeat:asterisk user=root group=root op monitor timeout=30s
 
 #### passwd hacluster
 

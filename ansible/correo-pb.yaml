@@ -2,12 +2,14 @@
 - hosts: servidores
   become: yes
   tasks:
+    - name: Instalar paquete EPEL Release
+      shell: yum install /tmp/epel-release* -y   
+    - name: hostname
+      shell: hostnamectl set-hostname correo.laura.local
     - name: copiar /etc/hosts
       copy:
         src: /tmp/asterisk_httpd_postfix/conf/rhel8/hosts
         dest: /etc/hosts
-    - name: reglas firewall
-      shell: firewall-cmd --add-port=80/tcp --permanent
     - name: Instalar postfix
       yum:
         name: postfix
@@ -38,6 +40,15 @@
       copy:
         src: /tmp/asterisk_httpd_postfix/conf/correo/dovecot/conf.d/10-auth.conf
         dest: /etc/dovecot/conf.d
+    - name: copiar /etc/dovecot/conf.d/10-mail.conf
+      copy:
+        src: /tmp/asterisk_httpd_postfix/conf/correo/dovecot/conf.d/10-mail.conf
+        dest: /etc/dovecot/conf.d
+    - name: Iniciar dovecot
+      service:
+        name: dovecot
+        state: started
+        enabled: true
     - name: copiar /etc/dovecot/conf.d/10-master.conf
       copy:
         src: /tmp/asterisk_httpd_postfix/conf/correo/dovecot/conf.d/10-master.conf
@@ -51,7 +62,7 @@
     - name: configurar squirrelmail
       copy:
         src: /tmp/asterisk_httpd_postfix/conf/correo/squirrelmail/config.php
-        dest: /etc/httpd/conf
+        dest: /usr/share/squirrelmail/config
     - name: copiar /etc/httpd/conf/httpd.conf
       copy:
         src: /tmp/asterisk_httpd_postfix/conf/correo/httpd.conf
@@ -62,3 +73,10 @@
         state: restarted
     - name: httpd_can_network_connect=1
       shell: setsebool -P httpd_can_network_connect=1
+    - name: selinux 0
+      shell: setenforce 0
+    - name: firewall stop
+      service:
+        name: firewalld
+        state: stopped
+        enabled: false
